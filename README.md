@@ -146,7 +146,7 @@ Config file folder/set 2
 * **...**
 
 ## Nodes
-
+this is the conflict i have made
 ### hero_chassis_controller
 
 Reads temperature measurements and computed the average.
