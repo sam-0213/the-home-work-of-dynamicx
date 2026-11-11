@@ -3,11 +3,14 @@
 // STD
 #include <string>
 
-namespace hero_chassis_controller {
+namespace hero_chassis_controller
+{
 
 RosPackageTemplate::RosPackageTemplate(ros::NodeHandle &nodeHandle)
-    : nodeHandle_(nodeHandle) {
-  if (!readParameters()) {
+    : nodeHandle_(nodeHandle)
+{
+  if (!readParameters())
+  {
     ROS_ERROR("Could not read parameters.");
     ros::requestShutdown();
   }
@@ -18,20 +21,24 @@ RosPackageTemplate::RosPackageTemplate(ros::NodeHandle &nodeHandle)
   ROS_INFO("Successfully launched node.");
 }
 
-RosPackageTemplate::~RosPackageTemplate() {
+RosPackageTemplate::~RosPackageTemplate()
+{
 }
 
-bool RosPackageTemplate::readParameters() {
+bool RosPackageTemplate::readParameters()
+{
   if (!nodeHandle_.getParam("subscriber_topic", subscriberTopic_)) return false;
   return true;
 }
 
-void RosPackageTemplate::topicCallback(const sensor_msgs::Temperature &message) {
+void RosPackageTemplate::topicCallback(const sensor_msgs::Temperature &message)
+{
   algorithm_.addData(message.temperature);
 }
 
 bool RosPackageTemplate::serviceCallback(std_srvs::Trigger::Request &request,
-                                         std_srvs::Trigger::Response &response) {
+                                         std_srvs::Trigger::Response &response)
+{
   response.success = true;
   response.message = "The average is " + std::to_string(algorithm_.getAverage());
   return true;

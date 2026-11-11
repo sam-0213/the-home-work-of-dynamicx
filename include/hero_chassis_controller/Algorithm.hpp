@@ -4,12 +4,14 @@
 
 #include <Eigen/Core>
 
-namespace hero_chassis_controller {
+namespace hero_chassis_controller
+{
 
 /*!
  * Class containing the algorithmic part of the package.
  */
-class Algorithm {
+class Algorithm
+{
  public:
   /*!
    * Constructor.

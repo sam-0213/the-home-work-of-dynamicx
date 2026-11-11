@@ -10,12 +10,14 @@
 
 #include "Algorithm.hpp"
 
-namespace hero_chassis_controller{
+namespace hero_chassis_controller
+{
 
 /*!
  * Main class for the node to handle the ROS interfacing.
  */
-class RosPackageTemplate {
+class RosPackageTemplate
+{
  public:
   /*!
    * Constructor.
