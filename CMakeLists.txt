@@ -15,6 +15,9 @@ find_package(catkin REQUIRED
     roscpp
     sensor_msgs
     roslint
+    control_toolbox
+    dynamic_reconfigure
+    std_msgs
     )
 
 ## Find system libraries

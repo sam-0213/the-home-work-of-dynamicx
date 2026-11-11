@@ -1,1 +1,22 @@
 subscriber_topic: /temperature
+hero_chassis_controller:
+
+  wheel_0:
+    p: 1.0
+    i: 0.1
+    d: 0.01
+
+  wheel_1:
+    p: 1.0
+    i: 0.1
+    d: 0.01
+
+  wheel_2:
+    p: 1.0
+    i: 0.1
+    d: 0.01
+
+  wheel_3:
+    p: 1.0
+    i: 0.1
+    d: 0.01
